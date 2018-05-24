@@ -1,6 +1,6 @@
 import { AdminAuthGuard } from './services/admin-auth-guard.service';
 import { AuthGuard } from './services/auth-guard.service';
-import { AuthHttp, AUTH_PROVIDERS, provideAuth, AuthConfig } from 'angular2-jwt/angular2-jwt';
+import { AuthHttp, AUTH_PROVIDERS, provideAuth, AuthConfig } from 'angular2-jwt';
 import { OrderService } from './services/order.service';
 import { MockBackend } from '@angular/http/testing';
 import { fakeBackendProvider } from './helpers/fake-backend';
@@ -41,6 +41,7 @@ import { NoAccessComponent } from './no-access/no-access.component';
     ])
   ],
   providers: [
+    AUTH_PROVIDERS,
     OrderService,
 
     AuthService,
